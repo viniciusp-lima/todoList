@@ -1,0 +1,23 @@
+@media (max-width: 600px) {
+    .login-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .img-container {
+        height: 250px;
+    }
+
+    .img-container img, .img-container::before {
+        border-radius: 5px 5px 0 0 !important;
+    }
+}
+
+@media (max-width: 450px) {
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .img-container {
+        display: none;
+    }
+}

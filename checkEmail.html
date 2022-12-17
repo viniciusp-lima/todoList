@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Todo List</title>
+</head>
+<body>
+    <main class="check-email-wrapper">
+        <div class="check-email">
+            <div class="img-wrapper" onclick="photoSelectionWindow()">
+                <img src="img/photo-user.png" class="img-user">
+            </div>
+            <span class="img-wrapper-border"></span>
+            <p>Olá <span id="displayName"></span>, verifique seu E-mail para ter seu acesso liberado.</p>
+            <span class="emailStatus">E-mail: <span>Não verificado</span></span>
+            <input type="submit" value="Verificar" id="checkEmail">
+        </div>
+        <div class="box-model">
+            <div class="upload-photo-wrapper">
+                <div class="photo-wrapper">
+                    <i class='bx bxs-cloud-upload'></i>
+                </div>
+                <input type="file" name="photo" id="photo" accept="image/jpg, image/jpeg, image/png" hidden>
+                <div class="photo-inputs-wrapper">
+                    <input type="submit" value="Carregar foto" id="inputUploadPhoto" onclick="uploadPhoto()">
+                    <input type="submit" value="Aplicar" id="inputApplyPhoto" accept="image/png, image/jpeg" onclick="applyPhoto('img-user', 'box-model')">
+                </div>
+                <button id="close" onclick="photoSelectionWindow()">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-storage.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/checkEmail.js"></script>
+</body>
+</html>

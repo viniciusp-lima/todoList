@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Todo List</title>
+</head>
+<body>
+    <main class="main">
+        <section class="application-container">
+            <div class="user-container">
+                <form class="form-tarefas">
+                    <input type="text" name="tarefa" id="inputTarefa" placeholder="Digite aqui" required>
+                    <input type="submit" value="Aplicar" id="inputAplicar">
+                </form>
+                <button type="submit" class="btnSearch">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+                <button class="log-out">
+                    <ion-icon name="log-out-outline"></ion-icon>
+                </button>
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <input type="text" id="search" placeholder="Buscar">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <div class="tarefas-container">
+                <ul class="lista-tarefas">
+                    
+                </ul>
+            </div>
+        </section>
+        <div class="box-model js-remove-task">
+            <div class="remove-task-wrapper">
+                <span>Deseja apagar essa tarefa?</span>
+                <div>
+                    <input type="submit" value="Apagar">
+                    <input type="submit" value="Cancelar">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ICONES -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/application.js"></script>
+</body>
+</html>

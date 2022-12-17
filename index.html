@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <script type="text/javascript" language
+    ="javascript" src="js/jquery-1.3.2-vsdoc2.js"></script>
+    <title>Todo List</title>
+</head>
+<body>
+    <main class="main">
+        <section class="login-container">
+            <div class="img-container">
+                <img src="img/space.jpg" alt="space">
+                <span><img src="img/simbolo.svg">Lista de tarefas</span>
+            </div>
+            <div class="login conectar">
+                <form class="conectar-se">
+                    <h3 class="title">Conecte-se</h3>
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" class="email" required>
+                    <span class="email-border"></span>
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" class="password" required>
+                    <span class="password-border"></span>
+                    <input type="submit" value="Entrar" id="entrar">
+                    <div class="sign_in_method">
+                        <button id="google">
+                            <ion-icon name="logo-google"></ion-icon>
+                        </button>
+                        <button id="github">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </button>
+                    </div>
+                </form>
+                <form class="registrar">
+                    <h3 class="title">Registre-se</h3>
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" required>
+                    <span class="name-border"></span>
+                    <label for="registerEmail">E-mail</label>
+                    <input type="email" name="registerEmail" class="email" required>
+                    <span class="email-border"></span>
+                    <label for="registerPassword">Senha</label>
+                    <input type="password" name="registerPassword" class="password" required>
+                    <span class="password-border"></span>
+                    <input type="submit" value="Registrar" id="registrar">
+                </form>
+                <span class="register">Não possui uma conta? <a href="#" onclick="switchForm()">Clique aqui</a></span>
+                <span class="mensage"></span>
+            </div>
+        </section>
+    </main>
+
+    <!-- ICONES -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-database.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+.check-email-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.check-email {
+    width: 450px;
+    height: 250px;
+    padding: 30px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.img-wrapper {
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50%;
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+.img-wrapper:hover::after {
+    content: 'Carregar foto';
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,.35);
+}
+
+.img-wrapper-border {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: -32%;
+    left: 50%;
+    z-index: -1;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
+
+.img-user {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.check-email p {
+    margin-top: 80px;
+    font-weight: 400;
+    line-height: 1.2;
+    text-align: justify;
+    letter-spacing: 1.1px;
+}
+
+#displayName {
+    font-weight: bold;
+}
+
+.emailStatus {
+    margin: 20px 0;
+}
+
+.emailStatus span {
+    color: red;
+}
+
+.photo-inputs-wrapper {
+    display: flex;
+    gap: 15px;
+}
+
+[value="Verificar"],
+#inputApplyPhoto,
+#inputUploadPhoto {
+    padding: 10px 0;
+    width: 100%;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    letter-spacing: 1.2px;
+    background-color: #8541C6;
+    transition: all .5s;
+}
+
+[value="Verificar"]:hover,
+#inputApplyPhoto:hover,
+#inputUploadPhoto:hover {
+    background-color: #7337aa;
+}
+
+#inputApplyPhoto {
+    display: none;
+}
+
+#inputApplyPhoto.active {
+    display: initial;
+}
+
+.box-model {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.8);
+}
+
+.box-model.active {
+    display: flex;
+}
+
+.upload-photo-wrapper {
+    padding: 30px;
+    display: flex;
+    gap: 35px;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+}
+
+.photo-wrapper {
+    width: 300px;
+    height: 250px;
+    border: 3px solid lightgray;
+    border-style: dashed;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo-wrapper .bx {
+    font-size: 7rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: lightgray;
+}
+
+.photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#inputApplyPhoto {
+    width: 100%;
+    padding: 10px 0;
+    font-weight: 400;
+    position: initial;
+}
+
+#close {
+    margin: 3px;
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #000;
+    background-color: transparent;
+}
+
+#close .bx {
+    font-size: 1.5rem;
+    color: lightgray;
+}
